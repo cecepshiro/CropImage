@@ -69,6 +69,7 @@ var $modal = $('#modal');
 var image = document.getElementById('image');
 var cropper;
   
+//memunculkan preview image ke modal
 $("body").on("change", ".image", function(e){
     var files = e.target.files;
     var done = function (url) {
@@ -94,7 +95,7 @@ $("body").on("change", ".image", function(e){
     }
 });
 
-//memunculkan image ke modal
+//aksi crop di modal
 $modal.on('shown.bs.modal', function () {
     cropper = new Cropper(image, {
 	  aspectRatio: 1,
